@@ -1,16 +1,15 @@
 #include <string>
-
+#pragma once
 class Vlucht
 {
 private:
-    float prijs;
+    int prijs;
 public:
     //constructor
-    Vlucht(float prijs);
+    Vlucht(int prijs);
+    Vlucht();
     //getters
-    float getPrijs();
-    //setters
-    void setPrijs(float prijs);
+    int getPrijs();
 };
 
 class Rit
@@ -20,10 +19,9 @@ private:
 public:
     //constructor
     Rit(int kilometers);
+    Rit();
     //getters
     int getKilometers();
-    //setters
-    void setKilometers(int kilometers);
 };
 
 class Treinrit
@@ -33,10 +31,9 @@ private:
 public:
     //constructor
     Treinrit(int minuten);
+    Treinrit();
     //getters
     int getMinuten();
-    //setters
-    void setMinuten(int minuten);
 };
 
 class Stap
@@ -46,9 +43,19 @@ private:
     Rit rit;
     Treinrit treinrit;
     std::string soortStap;
+    std::string begin;
+    std::string eind;
+    int getal;
 public:
     //consructors
-    Stap(Vlucht vlucht);
-    Stap(Rit rit);
-    Stap(Treinrit treinrit);
+    Stap(Vlucht vlucht,std::string begin, std::string eind);
+    Stap(Rit rit,std::string begin, std::string eind);
+    Stap(Treinrit treinrit,std::string begin, std::string eind);
+    Stap(std::string begin, std::string eind);
+    //getters
+    std::string getBegin();
+    std::string getEind();
+    int getSoortStap();
+    int getGetal();
+
 };
