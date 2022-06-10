@@ -17,7 +17,7 @@ In de routes afbeelding is te zien hoe de routes/stappen eruit zien. Ook is hier
 Ik heb zoveel mogelijk in een korte periode af geprobeerd te krijgen. Het uitgewerkte algorime is hier geen van helaas. Wel heb ik enkele kleine veranderingen toegepast aan het programma. Zo is bedacht hoe de soorten rit met elkaar in verhouding staan (routes.pdf) en zijn er nieuwe klassen bij bedacht.
 
 # algoritme
-In het kort gaat het algoritme alsvolgt (van dijk):
+In het kort gaat het algoritme alsvolgt (dijkstra):
 1 kijk naar mogelijke stappen
 2 pak kies de kortste stap (ook met de afgelegde stappen erbij)
 3 ga verder bij 1.
