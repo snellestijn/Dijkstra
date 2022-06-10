@@ -65,3 +65,20 @@ int Stap::getSoortStap(){
 }
 int Stap::getGetal(){return this->getal;}
 
+std::vector<Stap> stappenGenereren(){
+    std::vector<Stap> stappen;
+    stappen.push_back(Stap(Rit(250),"A","B"));
+    stappen.push_back(Stap(Treinrit(200),"A","D"));
+    stappen.push_back(Stap(Rit(150),"A","C"));
+    stappen.push_back(Stap(Treinrit(250),"C","E"));
+    stappen.push_back(Stap(Vlucht(180),"C","H"));
+    stappen.push_back(Stap(Rit(100),"D","E"));
+    stappen.push_back(Stap(Rit(50),"D","F"));
+    stappen.push_back(Stap(Rit(50),"B","D"));
+    stappen.push_back(Stap(Treinrit(200),"B","F"));
+    stappen.push_back(Stap(Rit(200),"F","H"));
+    stappen.push_back(Stap(Rit(150),"G","H"));
+    stappen.push_back(Stap(Rit(70),"E","G"));
+    stappen.push_back(Stap(Vlucht(130),"B","H"));
+    return stappen;
+    }

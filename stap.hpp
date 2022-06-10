@@ -1,5 +1,7 @@
 #include <string>
 #pragma once
+#include <vector>
+
 class Vlucht
 {
 private:
@@ -59,3 +61,5 @@ public:
     int getGetal();
 
 };
+
+std::vector<Stap> stappenGenereren();

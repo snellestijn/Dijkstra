@@ -46,8 +46,9 @@ public:
     std::string getEinde();
 
     //setters
-    void updateRoutes(Route route);
-    void updateStappen(Stap stap);
+    void updateRoutes(Route route,Stap stap);
+    void verwijderStap(Stap stap);
+    void updateStappen(std::vector<Stap> Stap);
 
     //function
     int berekenKosten(Stap stap);

@@ -17,22 +17,33 @@ int Route::getKosten(){return this->kosten;}
 std::string Route::getEind(){return this->eind;}
 
 Reis::Reis(Stap stap){
-    this->stappen.push_back(stap);
+    updateStappen({stap});
     this->einde = "H";
+    this->routes.push_back(Route(stap,stap.getGetal()));
 }
 std::vector<Route> Reis::getRoutes(){return this->routes;}
 std::vector<Stap> Reis::getStappen(){return this->stappen;}
 std::string Reis::getEinde(){return this->einde;}
-void Reis::updateRoutes(Route route){
-    this->routes.push_back(route);
+void Reis::updateRoutes(Route route,Stap stap){
+    for (Route rout : this->routes){
+        if (rout.getEind() == stap.getBegin()){
+            this->routes.push_back(rout);
+        }
+    }
 }
-void Reis::updateStappen(Stap stap){
+void Reis::verwijderStap(Stap stap){
     for (int i = 0; i < this->stappen.size();i++){
         if (stappen[i].getEind() == stap.getEind()){
             stappen.erase(stappen.begin()+i);
         }
     }
 }
+void Reis::updateStappen(std::vector<Stap> stappen){
+    for (Stap stap : stappen){
+        this->stappen.push_back(stap);
+    }
+}
+
 int Reis::berekenKosten(Stap stap){
     int soort = stap.getSoortStap();
     int kosten;
